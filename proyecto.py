@@ -38,3 +38,8 @@ if __name__ == "__main__":
     dataframes = [df_ecommerce_customers_dataset,df_ecommerce_order_items_dataset,
                  df_ecommerce_order_payments_dataset,df_ecommerce_orders_dataset,
                  df_ecommerce_products_dataset]
+
+
+    # Establecer la columna indices de las tablas como la clave primaria en el Dataframe
+    establecer_index(dataframes)
+    print(dataframes)
