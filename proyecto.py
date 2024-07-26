@@ -59,6 +59,81 @@ def lectura_datos_ecommerce_products_dataset(ecommerce_products_dataset):
     return ecommerce_products_df
 
 
+# Definición de funciones para la exploración de los dataframes
+def exploracion_datos_ecommerce_customers_df(ecommerce_customers_df):
+    '''
+    Esta función realiza la exploración del dataframe ecommerce_customers_df
+    '''
+    # Muestra la información del dataframe ecommerce_customers_df
+    print("--------------------------------- Info ---------------------------")
+    print(ecommerce_customers_df.info)
+    # Muestra las primeras diez filas del dataframe ecommerce_customers_df
+    print("--------------------------------- Head ---------------------------")
+    print(ecommerce_customers_df.head())
+    # Muestra las estadisticas descriptivas del dataframe ecommerce_customers_df
+    print("--------------------------------- Describe -----------------------")
+    print(ecommerce_customers_df.describe())
+
+def exploracion_datos_ecommerce_order_items_df(ecommerce_order_items_df):
+    '''
+    Esta función realiza la exploración del dataframe ecommerce_order_items_df
+    '''
+     # Muestra la información del dataframe ecommerce_order_items_df
+    print("--------------------------------- Info ---------------------------")
+    print(ecommerce_order_items_df.info)
+    # Muestra las primeras diez filas del dataframe ecommerce_order_items_df
+    print("--------------------------------- Head ---------------------------")
+    print(ecommerce_order_items_df.head())
+    # Muestra las estadisticas descriptivas del dataframe ecommerce_order_items_df
+    print("--------------------------------- Describe -----------------------")
+    print(ecommerce_order_items_df.describe())
+
+def exploracion_datos_ecommerce_order_payments_df(ecommerce_order_payments_df):
+    '''
+    Esta función realiza la exploración del dataframe ecommerce_order_payments_df
+    '''
+    # Muestra la información del dataframe ecommerce_order_payments_df
+    print("--------------------------------- Info ---------------------------")
+    print(ecommerce_order_payments_df.info)
+    # Muestra las primeras diez filas del dataframe ecommerce_order_payments_df
+    print("--------------------------------- Head ---------------------------")
+    print(ecommerce_order_payments_df.head())
+    # Muestra las estadisticas descriptivas del dataframe ecommerce_order_payments_df
+    print("--------------------------------- Describe -----------------------")
+    print(ecommerce_order_payments_df.describe())
+
+
+def exploracion_datos_ecommerce_orders_df(ecommerce_orders_df):
+    '''
+    Esta función realiza la exploración del dataframe ecommerce_orders_df
+    '''
+    # Muestra la información del dataframe ecommerce_orders_df
+    print("--------------------------------- Info ---------------------------")
+    print(ecommerce_orders_df.info)
+    # Muestra las primeras diez filas del dataframe ecommerce_orders_df
+    print("--------------------------------- Head ---------------------------")
+    print(ecommerce_orders_df.head())
+    # Muestra las estadisticas descriptivas del dataframe ecommerce_orders_df
+    print("--------------------------------- Describe -----------------------")
+    print(ecommerce_orders_df.describe())
+
+
+def exploracion_datos_ecommerce_products_df(ecommerce_products_df):
+    '''
+    Esta función realiza la exploración del dataframe ecommerce_products_df
+    '''
+    # Muestra la información del dataframe ecommerce_products_df
+    print("--------------------------------- Info ---------------------------")
+    print(ecommerce_products_df.info)
+        # Muestra las primeras diez filas del dataframe ecommerce_products_df
+    print("--------------------------------- Head ---------------------------")
+    print(ecommerce_products_df.head())
+        # Muestra las estadisticas descriptivas del dataframe ecommerce_products_df
+    print("--------------------------------- Describe -----------------------")
+    print(ecommerce_products_df.describe())
+
+
+
 
 # Empieza el programa principal
 if __name__ == "__main__":
