@@ -238,6 +238,16 @@ def total_pedidos_realizados(ecommerce_orders_df):
     pedidos_realizados = ecommerce_orders_df.shape[0]
     print("El Total de pedidos realizados es: ",pedidos_realizados)
 
+def establecer_index(dataframes):
+    """
+    Establecer los id como indice para los Dataframes proporcionados
+    """
+    dataframes[0]=dataframes[0].set_index("customer_id")
+    dataframes[1]=dataframes[1].set_index("order_item_id")
+    dataframes[2]=dataframes[2].set_index("order_id")
+    dataframes[3]=dataframes[3].set_index("order_id")
+    dataframes[4]=dataframes[4].set_index("product_id")
+
 
 
 
