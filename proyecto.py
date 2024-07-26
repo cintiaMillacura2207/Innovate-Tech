@@ -254,8 +254,21 @@ def exportar_excel_dataframe(dataframe):
     """
     dataframe.to_excel('datos_limpios.xlsx',index=False)
 
+def exportar_excel(dataframes):
+    """
+    Esta función se usa para exportar datos de varios dataframes
+    """
+    file = "dataframes.xlsx"
+    with pd.ExcelWriter(file) as writer:
+        dataframes[0].to_excel(writer,sheet_name="customers",index=False)
+        dataframes[1].to_excel(writer,sheet_name="order_items",index=False)
+        dataframes[2].to_excel(writer,sheet_name="order_payments",index=False)
+        dataframes[3].to_excel(writer,sheet_name="orders",index=False)
+        dataframes[4].to_excel(writer,sheet_name="products",index=False)
 
 
+##########################################################################################
+#
 # Empieza el programa principal
 if __name__ == "__main__":
     
