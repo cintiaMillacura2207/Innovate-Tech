@@ -68,3 +68,12 @@ if __name__ == "__main__":
 
     # Exportar los dataframes en un archivo excel
     exportar_excel(dataframes)
+
+    # Gráficos
+    df_ecommerce_products_dataset["product_category_name"].value_counts().plot(kind="bar")
+    plt.title("Gráfico de barras de producto")
+    plt.savefig("productos_bar.png")
+
+    df_ecommerce_products_dataset["product_category_name"].value_counts().plot(kind="pie")
+    plt.title("Gráfico de torta de producto")
+    plt.savefig("productos_pie.png")
