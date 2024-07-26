@@ -33,3 +33,8 @@ if __name__ == "__main__":
     exploracion_datos_ecommerce_order_payments_df(df_ecommerce_order_payments_dataset)
     exploracion_datos_ecommerce_orders_df(df_ecommerce_orders_dataset)
     exploracion_datos_ecommerce_products_df(df_ecommerce_products_dataset)
+
+    # Se crea una lista con los dataframes 
+    dataframes = [df_ecommerce_customers_dataset,df_ecommerce_order_items_dataset,
+                 df_ecommerce_order_payments_dataset,df_ecommerce_orders_dataset,
+                 df_ecommerce_products_dataset]
