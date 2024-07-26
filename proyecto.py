@@ -207,6 +207,36 @@ def eliminar_columnas_redundantes(dataframes):
 
     dataframes[4]=dataframes[4].drop(columns=lista_cuatro)
 
+def total_customer_unique_id(ecommerce_customers_df):
+    """
+    Esta función muestra el total de clientes unicos utilizando "customer_unique_id"
+    """
+    customers_unique = ecommerce_customers_df["customer_unique_id"].nunique()
+    print("Total customers unicos: ",customers_unique)
+
+
+def promedio_pago_pedido(ecommerce_order_payments_df):
+    """
+    Esta función busca el promedio de valor de pago por pedido
+    """
+    promedio = ecommerce_order_payments_df.groupby("order_id")["payment_value"].mean()
+    print(promedio)
+
+
+def categoria_producto_mas_vendido(ecommerce_products_df):
+   """
+   Esta función determina la categoria de producto mas vendido
+   """
+   mas_vendido = ecommerce_products_df.groupby("product_category_name")["product_category_name"].count().idxmax()
+   print("La categoria de producto mas vendida es: ",mas_vendido)
+
+
+def total_pedidos_realizados(ecommerce_orders_df):
+    """
+    Esta función calcula el número total de pedidos realizados
+    """
+    pedidos_realizados = ecommerce_orders_df.shape[0]
+    print("El Total de pedidos realizados es: ",pedidos_realizados)
 
 
 
