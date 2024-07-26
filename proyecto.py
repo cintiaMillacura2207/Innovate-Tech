@@ -50,3 +50,18 @@ if __name__ == "__main__":
     rellenar_nan(df_ecommerce_customers_dataset,df_ecommerce_order_items_dataset,df_ecommerce_order_payments_dataset,df_ecommerce_orders_dataset,df_ecommerce_products_dataset)
     rellenar_nan_ecommerce_customers_df(df_ecommerce_customers_dataset)
     eliminar_columnas_redundantes_ecommerce_products_dataset(df_ecommerce_products_dataset)
+
+
+    # Operaciones sobre los DataFrames
+
+    # Obtiene el numero total de clientes unicos en el conjunto de datos
+    total_customer_unique_id(df_ecommerce_customers_dataset)
+    
+    # Calcula el promedio de valor de pago por pedido
+    promedio_pago_pedido(df_ecommerce_order_payments_dataset)
+    
+    # Determina la categoria de producto mas vendida
+    categoria_producto_mas_vendido(df_ecommerce_products_dataset)
+    
+    # Calcula el numero total de pedidos realizados
+    total_pedidos_realizados(df_ecommerce_orders_dataset)
