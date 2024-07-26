@@ -65,3 +65,6 @@ if __name__ == "__main__":
     
     # Calcula el numero total de pedidos realizados
     total_pedidos_realizados(df_ecommerce_orders_dataset)
+
+    # Exportar los dataframes en un archivo excel
+    exportar_excel(dataframes)
