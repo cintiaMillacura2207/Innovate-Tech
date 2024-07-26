@@ -133,6 +133,83 @@ def exploracion_datos_ecommerce_products_df(ecommerce_products_df):
     print(ecommerce_products_df.describe())
 
 
+# Funciones para la limpieza y procesamiento de los datos
+# cada una de estas funciones devuelve un dataframe procesado
+def eliminar_duplicados(dataframes):
+    '''
+    Esta función realiza la eliminación de duplicados de los dataframes
+    '''
+
+    for i,dataframe in enumerate(dataframes):
+        dataframes[i]= dataframe.drop_duplicates()
+
+
+def eliminar_nan(dataframes):
+    '''
+    Esta función realiza la eliminación de los valores NaN o nulos de los dataframes
+    '''
+    
+    for i,dataframe in enumerate(dataframes):
+        dataframes[i]= dataframe.dropna()
+
+
+def rellenar_nan(ecommerce_customers_df,
+                 ecommerce_order_items_df,
+                 ecommerce_order_payments_df,
+                 ecommerce_orders_df,
+                 ecommerce_products_df):
+    '''
+    Esta función realiza para rellenar valores nulos con un valor especifico en los dataframes
+    '''
+    lista = [ecommerce_customers_df,
+             ecommerce_order_items_df,
+             ecommerce_order_payments_df,
+             ecommerce_orders_df,
+             ecommerce_products_df]
+
+    for dataframe in lista:
+        dataframe.fillna(dataframe["columna_a_rellenar"].mean(),inplace=True)
+
+
+def rellenar_nan_ecommerce_customers_df(dataframe):
+    '''
+    Esta función realiza para rellenar valores nulos con un valor especifico en los dataframes
+    '''
+    dataframe.fillna(dataframe["columna_a_rellenar"].mean(),inplace=True)
+
+
+def eliminar_columnas_redundantes_ecommerce_products_dataset(dataframe):
+    """
+    Elimina columnas redundantes que no van a ser utilizadas
+    """
+    lista = ["product_name_lenght","product_description_lenght","product_photos_qty","product_weight_g","product_length_cm","product_height_cm","product_width_cm"]
+    dataframe = dataframe.drop(columns=lista)
+    print(dataframe)
+
+
+def eliminar_columnas_redundantes(dataframes):
+    """
+    Elimina columnas redundantes que no van a ser utilizadas
+    """
+    lista_cero = ["customer_zip_code_prefix","customer_city","customer_state"]
+    dataframes[0]=dataframes[0].drop(columns=lista_cero)
+
+    lista_uno = ["seller_id","shipping_limit_date","order_id","product_id","price"]
+    dataframes[1]=dataframes[1].drop(columns=lista_uno)
+    
+    lista_dos = ["payment_sequential","payment_type","payment_installments"]
+    dataframes[2]=dataframes[2].drop(columns=lista_dos)
+
+    lista_tres = ["order_status","order_purchase_timestamp","order_approved_at","order_delivered_carrier_date","order_delivered_customer_date","order_estimated_delivery_date"]
+    dataframes[3]=dataframes[3].drop(columns=lista_tres)
+
+    lista_cuatro = ["product_name_lenght","product_description_lenght","product_photos_qty","product_weight_g","product_length_cm","product_height_cm","product_width_cm"]
+
+    dataframes[4]=dataframes[4].drop(columns=lista_cuatro)
+
+
+
+
 
 
 # Empieza el programa principal
