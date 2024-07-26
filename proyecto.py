@@ -248,7 +248,11 @@ def establecer_index(dataframes):
     dataframes[3]=dataframes[3].set_index("order_id")
     dataframes[4]=dataframes[4].set_index("product_id")
 
-
+def exportar_excel_dataframe(dataframe):
+    """
+    Esta función se usa para exportar los datos de un solo dataframe
+    """
+    dataframe.to_excel('datos_limpios.xlsx',index=False)
 
 
 
