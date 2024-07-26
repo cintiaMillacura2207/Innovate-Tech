@@ -43,3 +43,10 @@ if __name__ == "__main__":
     # Establecer la columna indices de las tablas como la clave primaria en el Dataframe
     establecer_index(dataframes)
     print(dataframes)
+
+    # Limpieza y procesamiento de los datos
+    eliminar_duplicados(dataframes)
+    eliminar_nan(dataframes)
+    rellenar_nan(df_ecommerce_customers_dataset,df_ecommerce_order_items_dataset,df_ecommerce_order_payments_dataset,df_ecommerce_orders_dataset,df_ecommerce_products_dataset)
+    rellenar_nan_ecommerce_customers_df(df_ecommerce_customers_dataset)
+    eliminar_columnas_redundantes_ecommerce_products_dataset(df_ecommerce_products_dataset)
