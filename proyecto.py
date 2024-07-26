@@ -3,6 +3,61 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Definición de las funciones que devuelven los dataframes luego de la lectura de archivos .csv
+def lectura_datos_ecommerce_customers_dataset(ecommerce_customers_dataset):
+    '''
+    Esta función realizar la lectura de ecommerce_customers_dataset
+    
+    Returns:
+    - Dataframe correspondientes a ecommerce_customers_dataset
+    '''
+    ecommerce_customers_df = pd.read_csv(ecommerce_customers_dataset)
+    return ecommerce_customers_df
+
+
+def lectura_datos_ecommerce_order_items_dataset(ecommerce_order_items_dataset):
+    '''
+    Esta realizar la lectura de ecommerce_order_items_dataset
+
+    Returns:
+    - Dataframe correspondientes a ecommerce_order_items_dataset
+    '''
+    ecommerce_order_items_df = pd.read_csv(ecommerce_order_items_dataset)
+    return ecommerce_order_items_df
+
+
+def lectura_datos_ecommerce_order_payments_dataset(ecommerce_order_payments_dataset):
+    '''
+    Esta función realizar la lectura de ecommerce_order_payments_dataset
+
+    Returns:
+    - Dataframe correspondientes a ecommerce_order_payments_dataset
+    '''
+    ecommerce_order_payments_df = pd.read_csv(ecommerce_order_payments_dataset)
+    return ecommerce_order_payments_df
+
+
+def lectura_datos_ecommerce_orders_dataset(ecommerce_orders_dataset):
+    '''
+    Esta función realizar la lectura de ecommerce_orders_dataset
+
+    Returns:
+    - Dataframe correspondientes a ecommerce_orders_dataset
+    '''
+    ecommerce_orders_df = pd.read_csv(ecommerce_orders_dataset)
+    return ecommerce_orders_df
+
+
+def lectura_datos_ecommerce_products_dataset(ecommerce_products_dataset):
+    '''
+    Esta función realizar la lectura de ecommerce_products_dataset
+
+    Returns:
+    - Dataframe correspondientes a ecommerce_products_dataset
+    '''
+    ecommerce_products_df = pd.read_csv(ecommerce_products_dataset)
+    return ecommerce_products_df
+
 
 
 # Empieza el programa principal
